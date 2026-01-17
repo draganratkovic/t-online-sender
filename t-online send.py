@@ -17,7 +17,7 @@ RESET = "\033[0m"
 
 # === FIXED CONFIG ===
 SMTP_HOST = "securemail.t-online.de"
-SMTP_PORT = 465  # SSL – t-online prefers this
+SMTP_PORT = 587  # SSL – t-online prefers this
 BATCH_SIZE = 100  # 100 emails per account
 
 # Load fixed files
