@@ -4,6 +4,11 @@ import random
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
+import socket
+
+# Force IP for securemail.t-online.de to bypass DNS failure on Render
+original_gethostbyname = socket.gethostbyname
+socket.gethostbyname = lambda x: "195.50.155.50" if x == "securemail.t-online.de" else original_gethostbyname(x)
 
 # ANSI colors
 GREEN = "\033[92m"
